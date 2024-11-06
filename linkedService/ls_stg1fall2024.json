@@ -1,0 +1,11 @@
+{
+	"name": "ls_stg1fall2024",
+	"properties": {
+		"description": "linked service for storage account",
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://stg1fal2024.dfs.core.windows.net/"
+		}
+	}
+}
