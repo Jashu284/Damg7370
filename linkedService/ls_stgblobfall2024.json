@@ -1,0 +1,12 @@
+{
+	"name": "ls_stgblobfall2024",
+	"properties": {
+		"description": "linked service for blob storage",
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"serviceEndpoint": "https://stg1blob.blob.core.windows.net/",
+			"accountKind": "StorageV2"
+		}
+	}
+}
