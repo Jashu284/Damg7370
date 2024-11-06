@@ -1,5 +1,5 @@
 {
-	"name": "Parquet_staging1",
+	"name": "ds_Parquet_staging1",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_stg1fall2024",
