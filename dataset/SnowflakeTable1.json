@@ -5,6 +5,16 @@
 			"referenceName": "ls_snowflake1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"D": {
+				"type": "string",
+				"defaultValue": "\"n\""
+			},
+			"F": {
+				"type": "string",
+				"defaultValue": "\"n\""
+			}
+		},
 		"annotations": [],
 		"type": "SnowflakeV2Table",
 		"schema": [
