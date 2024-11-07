@@ -1,0 +1,57 @@
+{
+	"name": "df_ld_breed_dim",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_snowflake1",
+						"type": "DatasetReference"
+					},
+					"name": "sourcestg"
+				},
+				{
+					"dataset": {
+						"referenceName": "ds_snowflake_breed_dim",
+						"type": "DatasetReference"
+					},
+					"name": "sourcebreeddim",
+					"description": "import data from breed table"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "sourcedatawithsk",
+					"description": "join stg and breed"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          LICENSE_ISSUE_DATE as string,",
+				"          LICENSE_NUMBER as string,",
+				"          ANIMAL_S_NAME as string,",
+				"          SPECIES as string,",
+				"          PRIMARY_BREED as string,",
+				"          SECONDARY_BREED as string,",
+				"          ZIP_CODE as string,",
+				"          DI_CREATED_DATE as string,",
+				"          DI_JOB_ID as string",
+				"     ),",
+				"     allowSchemaDrift: false,",
+				"     validateSchema: false,",
+				"     format: 'table') ~> sourcestg",
+				"source(allowSchemaDrift: false,",
+				"     validateSchema: false,",
+				"     query: 'SELECT NVL(MAX(BREED_SK),0) as MaxBreedSK FROM DEMO.BREED_DIM',",
+				"     format: 'query') ~> sourcebreeddim",
+				"sourcestg, sourcebreeddim join(1==1,",
+				"     joinType:'cross',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> sourcedatawithsk"
+			]
+		}
+	}
+}
