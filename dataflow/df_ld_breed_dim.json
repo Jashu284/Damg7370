@@ -42,7 +42,7 @@
 				"     validateSchema: false,",
 				"     limit: 100,",
 				"     format: 'table') ~> sourcestg",
-				"source(allowSchemaDrift: false,",
+				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     query: 'SELECT NVL(MAX(BREED_SK),0) as MaxBreedSK FROM DEMO.BREED_DIM',",
 				"     format: 'query') ~> sourcebreeddim",
