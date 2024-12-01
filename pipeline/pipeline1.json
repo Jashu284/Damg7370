@@ -87,80 +87,110 @@
 									"mappings": [
 										{
 											"source": {
-												"name": "License Issue Date",
-												"type": "String",
-												"physicalType": "String"
+												"name": "customer_id",
+												"type": "Int32",
+												"physicalType": "int"
 											},
 											"sink": {
-												"name": "License_Issue_Date",
-												"physicalType": "UTF8"
+												"name": "customer_id",
+												"type": "Int32",
+												"physicalType": "INT_32"
 											}
 										},
 										{
 											"source": {
-												"name": "License Number",
-												"type": "String",
-												"physicalType": "String"
+												"name": "store_id",
+												"type": "Int32",
+												"physicalType": "int"
 											},
 											"sink": {
-												"name": "License_Number",
-												"physicalType": "UTF8"
+												"name": "store_id",
+												"type": "Int32",
+												"physicalType": "INT_32"
 											}
 										},
 										{
 											"source": {
-												"name": "Animal's Name",
+												"name": "first_name",
 												"type": "String",
-												"physicalType": "String"
+												"physicalType": "varchar"
 											},
 											"sink": {
-												"name": "Animal_Name",
-												"physicalType": "UTF8"
-											}
-										},
-										{
-											"source": {
-												"name": "Species",
-												"type": "String",
-												"physicalType": "String"
-											},
-											"sink": {
-												"name": "Species",
+												"name": "first_name",
 												"type": "String",
 												"physicalType": "UTF8"
 											}
 										},
 										{
 											"source": {
-												"name": "Primary Breed",
+												"name": "last_name",
 												"type": "String",
-												"physicalType": "String"
+												"physicalType": "varchar"
 											},
 											"sink": {
-												"name": "Primary_Breed",
+												"name": "last_name",
+												"type": "String",
 												"physicalType": "UTF8"
 											}
 										},
 										{
 											"source": {
-												"name": "Secondary Breed",
+												"name": "email",
 												"type": "String",
-												"physicalType": "String"
+												"physicalType": "varchar"
 											},
 											"sink": {
-												"name": "Secondary_Breed",
+												"name": "email",
+												"type": "String",
 												"physicalType": "UTF8"
 											}
 										},
 										{
 											"source": {
-												"name": "ZIP Code",
-												"type": "String",
-												"physicalType": "String"
+												"name": "address_id",
+												"type": "Int32",
+												"physicalType": "int"
 											},
 											"sink": {
-												"name": "ZIP_Code",
+												"name": "address_id",
+												"type": "Int32",
+												"physicalType": "INT_32"
+											}
+										},
+										{
+											"source": {
+												"name": "active",
+												"type": "String",
+												"physicalType": "char"
+											},
+											"sink": {
+												"name": "active",
+												"type": "String",
 												"physicalType": "UTF8"
+											}
+										},
+										{
+											"source": {
+												"name": "create_date",
+												"type": "DateTime",
+												"physicalType": "datetime"
+											},
+											"sink": {
+												"name": "create_date",
+												"type": "DateTime",
+												"physicalType": "INT_96"
+											}
+										},
+										{
+											"source": {
+												"name": "last_update",
+												"type": "DateTime",
+												"physicalType": "datetime"
+											},
+											"sink": {
+												"name": "last_update",
+												"type": "DateTime",
+												"physicalType": "INT_96"
 											}
 										}
 									],
