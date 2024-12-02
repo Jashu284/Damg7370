@@ -130,7 +130,7 @@
 						"referenceName": "ds_textfile1",
 						"type": "DatasetReference",
 						"parameters": {
-							"directory": "na",
+							"Directory": "na",
 							"FileName": "Seattle_Pet_Licenses_20241007.tsv"
 						}
 					}
