@@ -154,10 +154,6 @@
 								},
 								"sink": {
 									"type": "SnowflakeV2Sink",
-									"preCopyScript": {
-										"value": "@toUpper(item().table_name)",
-										"type": "Expression"
-									},
 									"importSettings": {
 										"type": "SnowflakeImportCopyCommand"
 									}
@@ -168,7 +164,7 @@
 										"referenceName": "ls_stgblobfall2024",
 										"type": "LinkedServiceReference"
 									},
-									"path": "snowstaging1"
+									"path": "assignment"
 								}
 							},
 							"inputs": [
@@ -187,7 +183,14 @@
 							"outputs": [
 								{
 									"referenceName": "ds_snowflake1",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"schema_name": "PUBLIC",
+										"table_name": {
+											"value": "@toUpper(item().table_name)",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
